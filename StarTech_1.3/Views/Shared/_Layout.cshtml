@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="~/lib/favicon.ico" />
+    <title>@ViewData["Title"] - Employability</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style Nav.css" />
+    <link rel="styleseet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style Team.css" />
+    <link rel="stylesheet" href="~/css/style Footer.css" />
+    <img src="~/lib/favicon.ico" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY"></script>
+    <script>
+        $(document).ready(function () {
+            $('#icon').click(function () {
+                $('ul').toggleClass('show');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CoolCool</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>*@
+        <nav>
+            <label class="logo"><img src="~/css/logo4.png"></label>
+            <ul>
+                <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Home">Home</a></li>
+                <li><a class="hover" asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Drives">Our Drives</a></li>
+                <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Team">Meet the Team</a></li>
+                <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Map Find Us">Find Us</a></li>
+            </ul>
+            <label id="icon">
+                <i class="fas fa-bars"></i>
+            </label>
+            <section>
+            </section>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        @*<div class="container">
+                &copy; 2022 - CoolCool - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>*@
+        <div class="footer">
+            <div class="inner-footer">
+
+                <!--  for company name and description -->
+                <div class="footer-items">
+                    <h1>Employability</h1>
+                    <p>Description of company moto or vission.</p>
+                </div>
+
+                <!--  for quick links  -->
+                <div class="footer-items">
+                    <h3>Quick Links</h3>
+                    <div class="border1"></div> <!--for the underline -->
+                    <ul>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Home">Home</a></li>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Drives">Our Drives</a></li>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Team">Meet the Team</a></li>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Map Find Us">Find Us</a></li>
+                    </ul>
+                </div>
+
+                <!--  for some other links -->
+                <div class="footer-items">
+                    <h3>Extra Links</h3>
+                    <div class="border1"></div>  <!--for the underline -->
+                    <ul>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Home">Home</a></li>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Drives">Our Drives</a></li>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Team">Meet the Team</a></li>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                        <li><a class="hover" asp-area="" asp-controller="Home" asp-action="Map Find Us">Find Us</a></li>
+
+                    </ul>
+                </div>
+
+                <!--  for contact us info -->
+                <div class="footer-items">
+                    <h3>Contact us</h3>
+                    <div class="border1"></div>
+                    <ul>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Number, street, area</li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>(031) 123456</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>employability@gmail.com</li>
+                    </ul>
+
+                    <!--   for social links -->
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/login/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://support.google.com/answer/2451065?hl=en"><i class="fab fa-google-plus-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                Copyright &copy; StarTech Developers 2022.
+            </div>
+        </div>
+    </footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@RenderSection("Scripts", required: false)
+</body>
+</html>

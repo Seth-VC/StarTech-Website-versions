@@ -1,0 +1,98 @@
+﻿body {
+    background: #D3D3D3;
+    font-family: poppins;
+}
+.wrapper{
+    width:1170px;
+    margin:2% auto;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.section-header h2 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: #000000;
+    font-size:45px;
+    letter-spacing: 5px
+}
+.team member{
+    width: 29%;
+    height: auto;
+    float: left;
+    box-shadow: 5px 5px 15px #000;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 5px;
+    background: #00ff21;
+
+}
+.team-member img{
+    width: 100%
+}
+.team-member h3{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align:center;
+    color: #fff;
+}
+.team-member p{
+    color: #fff;
+}
+.team-member:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+}
+.team-member:hover:before{
+    border-color: #00ffff;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, 3s height linear .3s;
+}
+.team-member:hover:after {
+    border-color: #00ffff;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, 3s height linear .5s;
+}
+
+
+
+
+
+
+
+
+
+/*.team{
+    margin: 75px 0;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #333;
+    padding-bottom: 10px;
+}
+h1:after{
+    content:'';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}*/
